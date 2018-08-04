@@ -1,9 +1,54 @@
-# Megaklinikka Software Developer test
+# Kasper Keinänen Software Developer test
+
+
+## Instructions for part I:
+The easiest way to to test the function is to open the `part1.js` file and copy the code. 
+Then open a JavaScript conlole in your web browser (e.g. Google Chrome, Mozzilla Firefox).
+Paste the code into the console and try using the code like this:
+
+```
+wordsInaBox("Hello world! How are you today?")
+```
+The function `wordsInaBox()`will the log into the console:
+
+```
+********
+*Hello *
+*world!*
+*How   *
+*are   *
+*you   *
+*today?*
+********
+```
+
+## Instructions for part II:
+
+### Test Part II
+First run the Main.java
+
+Then you can test the webservice end point by using the command line tool `curl`.
+
+```
+~ $ curl --header "Content-Type: application/json" \
+> --request POST \
+> --data '{"text":"Hello!"}' \
+>    http://localhost:4567/hash 
+```
+
+Returns:
+```JSON
+{"hash":"334d016f755cd6dc58c53a86e183882f8ec14f52fb05345887c8a5edd42c87b7"}
+```
+
+## The test:
+
+### Megaklinikka Software Developer test
 
 Publish your solution along with instructions to compile and run the solution on a public
 code hosting site like GitHub or Bitbucket and send a link to the repository.
 
-## Part I
+#### Part I
 
 Write a JavaScript-function that takes a string and prints its words, one per
 line, in a rectangular frame. For example the string "Hello World in a frame"
@@ -19,7 +64,7 @@ gets printed as:
 *********
 ```
 
-## Part II
+#### Part II
 
 Using [Spark](http://sparkjava.com/) or [Play framework](https://www.playframework.com/)
 create a webservice endpoint that accepts the request described below and responds according
