@@ -3,7 +3,7 @@
 
 ## Instructions for part I:
 The easiest way to to test the function is to open the `part1.js` file and copy the code. 
-Then open a JavaScript conlole in your web browser (e.g. Google Chrome, Mozzilla Firefox).
+Then open a JavaScript console in your web browser (e.g. Google Chrome, Mozzilla Firefox).
 Paste the code into the console and try using the code like this:
 
 ```
@@ -25,20 +25,30 @@ The function `wordsInaBox()`will the log into the console:
 ## Instructions for part II:
 
 ### Test Part II
-First run the Main.java
+
+Clone the repository
+```
+$ git clone https://github.com/kasperkeinanen/Megaklinikka-Software-Developer-test.git
+```
+Run the Main.java
+
 
 Then you can test the webservice end point by using the command line tool `curl`.
 
 ```
 ~ $ curl --header "Content-Type: application/json" \
-> --request POST \
-> --data '{"text":"Hello!"}' \
->    http://localhost:4567/hash 
+ --request POST \
+ --data '{"text":"Hello!"}' \
+   http://localhost:4567/hash 
 ```
 
-Returns:
+Returns HTTP status code 200 and:
 ```JSON
 {"hash":"334d016f755cd6dc58c53a86e183882f8ec14f52fb05345887c8a5edd42c87b7"}
+```
+If the request is falsy then the webservice will return HTTP status code 400 and:
+```JSON
+{"errorMessage":"Bad Input"}
 ```
 
 ## The test:
