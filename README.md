@@ -9,6 +9,7 @@ Write a JavaScript-function that takes a string and prints its words, one per
 line, in a rectangular frame. For example the string "Hello World in a frame"
 gets printed as:
 
+```
 *********
 * Hello *
 * World *
@@ -16,6 +17,7 @@ gets printed as:
 * a     *
 * frame *
 *********
+```
 
 ## Part II
 
